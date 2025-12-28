@@ -1,0 +1,212 @@
+html, body {
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: rgb(34, 101, 216);
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: greenyellow;
+    padding: 18px 28px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+nav a img {
+    width: 28px;
+    height: 28px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.menu-khac {
+    position: relative;
+}
+
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    background-color: white;
+    list-style: none;
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 180px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+
+.menu-khac:hover .submenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+.submenu li a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.submenu li a:hover {
+    background-color: #e6f0ff;
+}
+
+.giohang {
+    padding: 40px;
+    background: white;
+    margin: 30px;
+    border-radius: 8px;
+}
+
+.giohang h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+.delete {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.tongtien {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.tongtien span {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.thanhtoan {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.footer {
+    background: #3198c4;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+}
+
+.footer-col {
+    width: 33%;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    color: #dce2e4;
+}
+
+.footer-col p,
+.footer-col a {
+    color: #c8c6ce;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #180fc3;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+}
